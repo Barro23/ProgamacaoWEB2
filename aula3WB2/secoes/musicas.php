@@ -1,6 +1,4 @@
-<?php
 
-?>
 
 <br/>
    <center><h1>Musicas de maior Sucesso!!!</h1></center> 
@@ -24,102 +22,33 @@
 
 <br/>
    <center><h1>Algumas das Lertras de Musica do Manuel Gomes</h1></center> 
-<br/>
-
-<div class="container letras">
-    <details>
-        <summary>
-            <h3>Caneta Azul</h3>
-        </summary>
-            <div class="letra">
-                <p>
-                    Caneta azul, azul caneta
-                    Caneta azul tá marcada com minha letra
-                    Caneta azul, azul caneta
-                    Caneta azul tá marcada com minha letra
-                </p>
-                <p>
-                    dia eu viajo pra o colégio
-                    Com uma caneta azul e uma caneta amarela
-                    Eu perdi minha caneta e eu peço
-                    Por favor, quem encontrou, me entrega ela
-                </p>
-                <p>
-                    Caneta azul, azul caneta
-                    Caneta azul tá marcada com minha letra
-                </p>
-                <p>
-                    A professora, ela veio brigar comigo
-                    Porque eu perdi a última caneta que eu tinha
-                    Não brigue, professora, porque eu vou comprar outra canetinha
-                </p>
-                <p>
-                    Caneta azul, azul caneta
-                    Caneta azul tá marcada com minha letra
-                </p>
-         </div>
-    </details>
-    <details>
-        <summary>
-        <h3>Olha, Se Você Não Me Ama</h3>
-        </summary>
-            <div class="letra">
-                <p>
-                    Olha, se você não me ama
-                    Então não me ligue
-                    Não fique me fazendo queixa
-                </p>
-                <p>
-                    Não faça como as outras já tem feito
-                    Que minha vida é sofrendo
-                    Por causa de uma mulher bandida
-                    Já teve noite de eu querer beber veneno
-                </p>
-         </div>
-    </details>
-    <details>
-        <summary>
-            <h3>Ela É Muito Vagabunda</h3>
-        </summary>
-            <div class="letra">
-                <p>
-                    Ela é muito é vagabunda, vagabunda ela é
-                    Ela deixa o marido em casa e vai ir pro cabaré
-                    Ela deixa o marido em casa e vai ir pro cabaré
+<br/><br>
 
 
-                </p>
-                <p>
-                    Ela é muito é vagabunda, vagabunda ela é
-                    Ela deixa o marido em casa e vai ir pro cabaré
-                    Ela deixa o marido em casa e vai ir pro cabaré
-                </p>
-                <p>
-                    Eu digo o que aconteceu comigo
-                    Ela passava em frente aos meus amigos
-                    O povo começava a falar
-                    Aí larguei ela pra largarem de comentar
-                </p>
-                <p>
-                    Ela é muito é vagabunda, vagabunda ela é
-                    Ela deixa o marido em casa e vai ir pro cabaré
-                    Ela deixa o marido em casa e vai ir pro cabaré
-                </p>
-                <p>
-                    O que eu tô descobrindo
-                    Dela eu não quero nem saber
-                    Ela é muito sem futuro, vou mandar ela embora
-                    Ela só quer fazer eu sofrer
-                </p>
-                <p>
-                    Ela é muito é vagabunda, vagabunda ela é
-                    Ela deixa o marido em casa e vai ir pro cabaré
-                    Ela deixa o marido em casa e vai ir pro cabaré
-                </p>
-         </div>
-    </details>
+
+<?php
+    include_once("dao/manipuladados.php");
+    $busca = new manipuladados();
+
+    $busca->setTable("tb_musicas");
+    $resultado = $busca->getAllDataTable();
+    while($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)){
+?>
+
+<div class="container card" style="width: 50rem;">
+  <img src="<?=$row[img];?>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><?=$row['musica'];?></h5>
+    <p class="card-text"><?=$row['letra'];?>.</p>
+    <p class="card-text"><?=$row['duracao'];?>.</p>
+    <a href="<?=$row[link];?>" class="btn btn-primary">Link MUisica</a>
+  </div>
 </div>
 
+
+<?php
+    }
+?>
 
 <div class="container">
     <br/>
@@ -141,3 +70,6 @@
 
     </form>
 </div>
+
+    
+

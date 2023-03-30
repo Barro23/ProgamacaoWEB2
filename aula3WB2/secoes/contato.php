@@ -1,6 +1,6 @@
 <?php
 
- include_once("dwo/conexao.php");
+ include_once("dao/conexao.php");
 
  //$conecta = new conexao();
 
