@@ -7,21 +7,21 @@
 <article class="container">
 
     <div class="musicas">
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/oxxJRZIZthg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/FbDplUUW8SQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/xE5TaJJAyU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="426" height="250" src="https://www.youtube.com/embed/oxxJRZIZthg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="426" height="250" src="https://www.youtube.com/embed/FbDplUUW8SQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="426" height="250" src="https://www.youtube.com/embed/xE5TaJJAyU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>    
 
     <div class="musicas">
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/Tw_IGPK4S_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/_KaA8W_Hov8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/2P_esm8cNgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="426" height="250" src="https://www.youtube.com/embed/Tw_IGPK4S_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="426" height="250" src="https://www.youtube.com/embed/_KaA8W_Hov8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="426" height="250" src="https://www.youtube.com/embed/2P_esm8cNgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>    
 
 </article>
 
 <br/>
-   <center><h1>Algumas das Lertras de Musica do Manuel Gomes</h1></center> 
+   <center><h1>Algumas das Letras de Musica do Manuel Gomes</h1></center> 
 <br/><br>
 
 
@@ -35,13 +35,12 @@
     while($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)){
 ?>
 
-<div class="container card" style="width: 50rem;">
-  <img src="" class="card-img-top" alt="...">
+<div class="container card" style="width: 80rem;">
   <div class="card-body">
     <h5 class="card-title"><?=$row['musica'];?></h5>
-    <p class="card-text"><?=$row['letra'];?>.</p>
-    <p class="card-text"><?=$row['duracao'];?>.</p>
-    <a href="" class="btn btn-primary">Link MUisica</a>
+    <p class="card-text"><?=$row['letra'];?></p>
+    <p class="card-text"><?=$row['duracao'];?></p>
+    <a href="<?=$row['link'];?>" class="btn btn-primary">Link Muisica</a>
   </div>
 </div>
 

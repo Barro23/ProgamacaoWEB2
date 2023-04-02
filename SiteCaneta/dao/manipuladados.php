@@ -29,6 +29,12 @@
             $this->status = self::exeSQL($this->sql) ? "cadastrado com sucesso" : "deu erro chapa".mysql_error();
         }
 
+        public function delete(){
+            $this->sql = "DELETE FROM $this->table($this->fields) VALUES ($this->dados)";
+
+            $this->status = self::exeSQL($this->sql) ? "deletado com sucesso" : "deu erro chapa".mysql_error();
+        }
+
         public function getAllDataTable(){
             $this->sql = "SELECT * FROM $this->table";
             $this->qr = self::exeSQL($this->sql);
