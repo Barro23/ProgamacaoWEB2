@@ -30,7 +30,7 @@
     include_once("dao/manipuladados.php");
     $busca = new manipuladados();
 
-    $busca->setTable("tb_musicas");
+    $busca->setTable("tb_musica");
     $resultado = $busca->getAllDataTable();
     while($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)){
 ?>
@@ -55,19 +55,36 @@
     <center><h1>Ajude a Colocarmos as 21 mil musicas do Manuel Gomes</h1></center> 
     <br/>
 
-    <form method="post" action="musicas.php" enctype="multipart/form-data">
+    
 
-                <p>
-                    <label>Escreva aqui as musicas do Manuel:</label>
-                    <input class="form-control form-control-lg" type="text" placeholder="Ex. Se você não me ama..." aria-label=".form-control-lg example">
-                </p>
+    <div class=" container estiloform">
+        <form method="post" class="form-floating" action="adm/canetasAzuis.php" >
+            
+            <input type="text" name="txtNome" class="form-control" id="floatingInputValue" placeholder="Nome da Musica" >
+            <label for="floatingInputValue">Nome da Musica</label>
 
-                <div>
-                    <label for="formFileLg" class="form-label">Envie um Arquivo das Musicas do Manuel:</label>
-                    <input class="form-control form-control-lg" id="formFileLg" type="file">
-                </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Escreva a letra da Musica</label>
+                <input type="text" name="txtMus" class="form-control" id="formGroupExampleInput2" placeholder="Ex.Olha se vc não me ama..">
+            </div>
 
-    </form>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Tempo da Musica</label>
+                <input type="text" name="txtTemp" class="form-control" id="formGroupExampleInput2" placeholder="Ex.2 min..">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Link da Musica</label>
+                <input type="text" name="txtLink" class="form-control" id="formGroupExampleInput2" placeholder="Ex.https://www.youtube.com/watch?v=1OA6J8aTGuo">
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
 </div>
 
     

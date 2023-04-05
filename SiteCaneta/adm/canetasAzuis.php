@@ -10,7 +10,7 @@
     echo "nome: ".$musica. "<br/>Letra: " .$letra. "<br/>Duração: ".$duracao. "<br/>Duração: ".$link;
 
     $manipula = new manipuladados();
-    $manipula->setTable("tb_musicas");
+    $manipula->setTable("tb_musica");
     $manipula->setFields("musica, letra, duracao, link");
     $manipula->setDados("'$musica','$letra','$duracao','$link'");
     $manipula->insert();

@@ -63,3 +63,13 @@ figure.logo{
     width: 100%;
 }
 
+.adicionar{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
