@@ -37,10 +37,13 @@
 
 <div class="container card" style="width: 80rem;">
   <div class="card-body">
-    <h5 class="card-title"><?=$row['musica'];?></h5>
-    <p class="card-text"><?=$row['letra'];?></p>
-    <p class="card-text"><?=$row['duracao'];?></p>
-    <a href="<?=$row['link'];?>" class="btn btn-primary">Link Muisica</a>
+    <form method="post" class="form-floating" action="adm/canetasAzuis.php" >
+        <h5 class="card-title"><input type="text" name="musica" value="<?=$row['musica'];?>"></h5>
+        <p class="card-text"><?=$row['letra'];?></p>
+        <p class="card-text"><?=$row['duracao'];?></p>
+        <a href="<?=$row['link'];?>" class="btn btn-primary">Link Muisica</a>
+        <input type="submit" class="btn btn-primary" name="acao" value="Deletar">
+    </form>
   </div>
 </div>
 
@@ -60,7 +63,7 @@
     <div class=" container estiloform">
         <form method="post" class="form-floating" action="adm/canetasAzuis.php" >
             
-            <input type="text" name="txtNome" class="form-control" id="floatingInputValue" placeholder="Nome da Musica" >
+            <input type="text" name="musica" class="form-control" id="floatingInputValue" placeholder="Nome da Musica" >
             <label for="floatingInputValue">Nome da Musica</label>
 
             <div class="mb-3">
@@ -79,7 +82,7 @@
             </div>
 
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="submit" class="btn btn-primary" name="acao" value="Enviar">
             </div>
         </form>
     </div>

@@ -60,7 +60,7 @@
         <div class=" container estiloform">
                 <form method="post" class="form-floating" action="canetasAzuis.php" >
                     
-                    <input type="text" name="txtNome" class="form-control" id="floatingInputValue" placeholder="Nome da Musica" >
+                    <input type="text" name="musica" class="form-control" id="floatingInputValue" placeholder="Nome da Musica" >
                     <label for="floatingInputValue">Nome da Musica</label>
 
                     <div class="mb-3">
@@ -79,13 +79,44 @@
                     </div>
 
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <input type="submit" class="btn btn-primary" name="acao" value="Enviar">
+                        <input type="submit" class="btn btn-primary" name="acao" value="Deletar">
                     </div>
+
                 </form>
          </div>
 
+         
+         
          <br/><br/><br/><br/><br/><br/><br/>
     </section>
+
+<?php
+    include_once("../dao/manipuladados.php");
+    $busca = new manipuladados();
+
+    $busca->setTable("tb_musica");
+    $resultado = $busca->getAllDataTable();
+    while($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)){
+?>
+
+<div class="container card" style="width: 80rem;">
+  <div class="card-body">
+    <form method="post" class="form-floating" action="adm/canetasAzuis.php" >
+        <h5 class="card-title"><input type="text" name="musica" value="<?=$row['musica'];?>"></h5>
+        <p class="card-text"><?=$row['letra'];?></p>
+        <p class="card-text"><?=$row['duracao'];?></p>
+        <a href="<?=$row['link'];?>" class="btn btn-primary">Link Muisica</a>
+        <input type="submit" class="btn btn-primary" name="acao" value="Deletar">
+        <input type="submit" class="btn btn-primary" name="acao" value="Atualizar">
+    </form>
+  </div>
+</div>
+
+
+<?php
+    }
+?>
 
     <footer class="container-fluid py-5 d-lg-block">
       <div class="row row-cols-lg-3 row-cols-md-1 row-cols-sm-1 rodape">

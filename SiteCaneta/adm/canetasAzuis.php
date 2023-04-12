@@ -1,22 +1,31 @@
 <?php
     include_once("../dao/manipuladados.php");
 
-    $musica =  $_POST["txtNome"];
-    $letra =  $_POST["txtMus"];
-    $duracao =  $_POST["txtTemp"];
-    $link =  $_POST["txtLink"];
+    
+    $acao =  $_POST["acao"];
+    if ($acao == "Deletar"){
+        $musica =  $_POST["musica"];
+        $delete = new manipuladados();
+        $delete->delete($musica);
 
+        echo "apagado com sucesso!";
 
-    echo "nome: ".$musica. "<br/>Letra: " .$letra. "<br/>Duração: ".$duracao. "<br/>Duração: ".$link;
+    }
+    else if($acao == "Enviar"){
+        $musica =  $_POST["musica"];
+        $letra =  $_POST["txtMus"];
+        $duracao =  $_POST["txtTemp"];
+        $link =  $_POST["txtLink"];
+        $enviar = new manipuladados();
+        $enviar->setTable("tb_musica");
+        $enviar->setFields("musica, letra, duracao, link");
+        $enviar->setDados("'$musica','$letra','$duracao','$link'");
+        $enviar->insert();
 
-    $manipula = new manipuladados();
-    $manipula->setTable("tb_musica");
-    $manipula->setFields("musica, letra, duracao, link");
-    $manipula->setDados("'$musica','$letra','$duracao','$link'");
-    $manipula->insert();
+        echo "nome: ".$musica. "<br/>Letra: " .$letra. "<br/>Duração: ".$duracao. "<br/>Duração: ".$link;
+        echo "<br/>".$enviar->getStatus();
 
-
-    echo "<br/>".$manipula->getStatus();
-
+    }
+    
 
 ?>
