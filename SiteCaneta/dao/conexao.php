@@ -6,7 +6,7 @@
                 $this->host = "localhost";
                 $this->user = "root";
                 $this->pass = "";
-                $this->dba = "db_mycaneta";
+                $this->dba = "db_mycanetas";
                 self::connect();
                 //echo "conectado com sucesso!!!!";
             }

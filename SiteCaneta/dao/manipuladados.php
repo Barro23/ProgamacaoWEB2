@@ -39,6 +39,14 @@
             $this->qr = self::exeSQL($this->sql);
             return $this->qr;
         }
+
+        public function validarLogin($login, $senha)
+        {
+            $this->sql = "SELECT * FROM $this->table WHERE nome='$login' and senha='$senha'";
+            $this->qr = self::exeSQL($this->sql);
+            $linhas = @mysqli_num_rows($this->qr);
+            return $linhas;
+        }
     }
 
 
