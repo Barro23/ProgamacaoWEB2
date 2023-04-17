@@ -33,6 +33,11 @@
             $this->sql = "DELETE FROM tb_musica WHERE musica = '".$musica."'";
             $this->qr = self::exeSQL($this->sql);
         }
+        public function update($musica, $duracao, $letra, $link, $id){
+            $this->sql = "UPDATE tb_musica SET musica = '".$musica."',duracao = '".$duracao."',letra = '".$letra."',link = '".$link."' WHERE $id = id ";
+            $this->qr = self::exeSQL($this->sql);
+        }
+
 
         public function getAllDataTable(){
             $this->sql = "SELECT * FROM $this->table";
@@ -42,7 +47,7 @@
 
         public function validarLogin($login, $senha)
         {
-            $this->sql = "SELECT * FROM $this->table WHERE nome='$login' and senha='$senha'";
+            $this->sql = "SELECT * FROM $this->table WHERE nome='$login' and senha='$senha'"; 
             $this->qr = self::exeSQL($this->sql);
             $linhas = @mysqli_num_rows($this->qr);
             return $linhas;

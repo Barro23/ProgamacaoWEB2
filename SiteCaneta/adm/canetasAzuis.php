@@ -25,6 +25,18 @@
         echo "nome: ".$musica. "<br/>Letra: " .$letra. "<br/>Duração: ".$duracao. "<br/>Duração: ".$link;
         echo "<br/>".$enviar->getStatus();
 
+    }else if($acao == "Atualizar"){
+        $musica =  $_POST["musica"];
+        $letra =  $_POST["txtMus"];
+        $duracao =  $_POST["txtTemp"];
+        $link =  $_POST["txtLink"];
+        $id = $_POST["id"];
+        $update = new manipuladados();
+        $update->update($musica, $duracao, $letra, $link, $id);
+
+        echo "nome: ".$musica. "<br/>Letra: " .$letra. "<br/>Duração: ".$duracao. "<br/>Duração: ".$link;
+        echo "atualizado com sucesso!";
+
     }
     
 

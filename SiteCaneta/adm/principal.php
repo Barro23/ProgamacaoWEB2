@@ -18,15 +18,17 @@
 </head>
 <body>
 
-<?php
-    echo "<h1>Bem vindo". $_SESSION["usuario"]. "</h1>";
-?>
+
 
     <header class="topo">
         <div>
             <img class="top" id="conf" src="../img/canetacima.png"  style="filter: sepia(100%) hue-rotate(190deg) saturate(500%);">
         </div>
     </header>
+
+    <?php
+    echo "<center><h3>Bem vindo ". $_SESSION["usuario"]. "!</h3></center>";
+    ?>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
@@ -98,7 +100,9 @@
          
          <br/><br/><br/><br/><br/><br/><br/>
     </section>
-
+    <br/>
+   <center><h1>Algumas das Letras de Musica do Manuel Gomes</h1></center> 
+    <br/><br>
 <?php
     include_once("../dao/manipuladados.php");
     $busca = new manipuladados();
@@ -110,11 +114,12 @@
 
 <div class="container card" style="width: 80rem;">
   <div class="card-body">
-    <form method="post" class="form-floating" action="adm/canetasAzuis.php" >
+    <form method="post" class="form-floating" action="canetasAzuis.php" >
+        <input type="text" hidden name="id" value="<?=$row['id'];?>">
         <h5 class="card-title"><input type="text" name="musica" value="<?=$row['musica'];?>"></h5>
-        <p class="card-text"><?=$row['letra'];?></p>
-        <p class="card-text"><?=$row['duracao'];?></p>
-        <a href="<?=$row['link'];?>" class="btn btn-primary">Link Muisica</a>
+        <p class="card-text"><input type="text" name="txtMus" value="<?=$row['letra'];?>"></p>
+        <p class="card-text"><input type="text" name="txtTemp" value="<?=$row['duracao'];?>"></p>
+        <a href="<?=$row['link'];?>" class="btn btn-primary"><input type="text" name="txtLink" value="<?=$row['link'];?>"></a>
         <input type="submit" class="btn btn-primary" name="acao" value="Deletar">
         <input type="submit" class="btn btn-primary" name="acao" value="Atualizar">
     </form>
