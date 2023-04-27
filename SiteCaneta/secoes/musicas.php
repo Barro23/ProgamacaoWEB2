@@ -38,11 +38,16 @@
 <div class="container card" style="width: 80rem;">
   <div class="card-body">
     <form method="post" class="form-floating" action="adm/canetasAzuis.php" >
-        <h5 class="card-title"><input type="text" name="musica" value="<?=$row['musica'];?>"></h5>
-        <p class="card-text"><?=$row['letra'];?></p>
-        <p class="card-text"><?=$row['duracao'];?></p>
-        <a href="<?=$row['link'];?>" class="btn btn-primary">Link Muisica</a>
-        <input type="submit" class="btn btn-primary" name="acao" value="Deletar">
+
+        <div class="card-img" style="width: 100%;" >
+                <img src="<?=$row['img'];?>"  style="width: 100%; height: 180px;">
+        </div>
+            <div class="card-img-overlay">
+            <h5 class="card-title"><?=$row['musica'];?></h5>
+            <p class="card-text"><?=$row['letra'];?></p>
+            <p class="card-text"><?=$row['duracao'];?></p>
+            <a href="<?=$row['link'];?>" class="btn btn-primary">Link Muisica</a>
+        </div>
     </form>
   </div>
 </div>

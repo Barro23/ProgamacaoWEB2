@@ -34,7 +34,7 @@
             $this->qr = self::exeSQL($this->sql);
         }
         public function update($musica, $duracao, $letra, $link, $id){
-            $this->sql = "UPDATE tb_musica SET musica = '".$musica."',duracao = '".$duracao."',letra = '".$letra."',link = '".$link."' WHERE $id = id ";
+            $this->sql = "UPDATE tb_musica SET musica = '".$musica."',duracao = '".$duracao."',letra = '".$letra."',link = '".$link.",img = '".$img."' WHERE $id = id ";
             $this->qr = self::exeSQL($this->sql);
         }
 

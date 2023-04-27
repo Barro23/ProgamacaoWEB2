@@ -88,6 +88,11 @@
                         <input type="text" name="txtLink" class="form-control" id="formGroupExampleInput2" placeholder="Ex.https://www.youtube.com/watch?v=1OA6J8aTGuo">
                     </div>
 
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Link da Img da musica</label>
+                        <input type="text" name="img" class="form-control" id="formGroupExampleInput2" placeholder="Ex.https://www.img">
+                    </div>
+
                     <div class="col-12">
                         <input type="submit" class="btn btn-primary" name="acao" value="Enviar">
                         <input type="submit" class="btn btn-primary" name="acao" value="Deletar">
@@ -103,6 +108,8 @@
     <br/>
    <center><h1>Algumas das Letras de Musica do Manuel Gomes</h1></center> 
     <br/><br>
+
+    <section class="contanier row row-cols-lg-12 row-cols-sm-1">    
 <?php
     include_once("../dao/manipuladados.php");
     $busca = new manipuladados();
@@ -112,24 +119,27 @@
     while($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)){
 ?>
 
-<div class="container card" style="width: 80rem;">
-  <div class="card-body">
-    <form method="post" class="form-floating" action="canetasAzuis.php" >
-        <input type="text" hidden name="id" value="<?=$row['id'];?>">
-        <h5 class="card-title"><input type="text" name="musica" value="<?=$row['musica'];?>"></h5>
-        <p class="card-text"><input type="text" name="txtMus" value="<?=$row['letra'];?>"></p>
-        <p class="card-text"><input type="text" name="txtTemp" value="<?=$row['duracao'];?>"></p>
-        <a href="<?=$row['link'];?>" class="btn btn-primary"><input type="text" name="txtLink" value="<?=$row['link'];?>"></a>
-        <input type="submit" class="btn btn-primary" name="acao" value="Deletar">
-        <input type="submit" class="btn btn-primary" name="acao" value="Atualizar">
-    </form>
-  </div>
-</div>
-
+        <div class="card" style="width: 30rem; margin-left: 10%; ">
+            <div class="card-body">
+                <form method="post" class="form-floating" action="canetasAzuis.php" >
+                    <div style="width: 400px;" >
+                        <img src="<?=$row['img'];?>"  style="width: 100%;">
+                    </div>
+                    <input type="text" hidden name="id" value="<?=$row['id'];?>">
+                    <h5 class="card-title"><input type="text" name="musica" value="<?=$row['musica'];?>"></h5>
+                    <p class="card-text"><input type="text" name="txtMus" value="<?=$row['letra'];?>"></p>
+                    <p class="card-text"><input type="text" name="txtTemp" value="<?=$row['duracao'];?>"></p>
+                    <a href="<?=$row['link'];?>" class="btn btn-primary"><input type="text" name="txtLink" value="<?=$row['link'];?>"></a>
+                    <input type="submit" class="btn btn-primary" name="acao" value="Deletar">
+                    <input type="submit" class="btn btn-primary" name="acao" value="Atualizar">
+                </form>
+            </div>
+        </div>
 
 <?php
     }
 ?>
+    </section>
 
     <footer class="container-fluid py-5 d-lg-block">
       <div class="row row-cols-lg-3 row-cols-md-1 row-cols-sm-1 rodape">

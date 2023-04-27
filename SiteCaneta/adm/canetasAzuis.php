@@ -16,10 +16,11 @@
         $letra =  $_POST["txtMus"];
         $duracao =  $_POST["txtTemp"];
         $link =  $_POST["txtLink"];
+        $img =  $_POST["img"];
         $enviar = new manipuladados();
         $enviar->setTable("tb_musica");
-        $enviar->setFields("musica, letra, duracao, link");
-        $enviar->setDados("'$musica','$letra','$duracao','$link'");
+        $enviar->setFields("musica, letra, duracao, link, img");
+        $enviar->setDados("'$musica','$letra','$duracao','$link', '$img'");
         $enviar->insert();
 
         echo "nome: ".$musica. "<br/>Letra: " .$letra. "<br/>Duração: ".$duracao. "<br/>Duração: ".$link;
@@ -31,6 +32,7 @@
         $duracao =  $_POST["txtTemp"];
         $link =  $_POST["txtLink"];
         $id = $_POST["id"];
+        $img = $_POST["img"];
         $update = new manipuladados();
         $update->update($musica, $duracao, $letra, $link, $id);
 
