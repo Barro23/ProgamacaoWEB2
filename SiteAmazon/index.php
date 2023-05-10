@@ -19,7 +19,7 @@
         <?php include("includes/topo.php") ?>
     </header>
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="colorMenu navbar navbar-expand-lg bg-body-tertiary">
         <?php include("includes/menu.php")?>
     </nav>
     
