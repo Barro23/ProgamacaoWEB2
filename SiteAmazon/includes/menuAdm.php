@@ -12,10 +12,6 @@
     <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="?secoes=inicio">Inicio</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link active" href="logout.php">Logout</a>
-    </li>
-
     <li class="nav-item dropdown">
         <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Action</a></li>

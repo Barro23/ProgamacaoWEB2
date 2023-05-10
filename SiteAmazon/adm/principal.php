@@ -25,8 +25,8 @@
 
 
 <header class="topo">
-        <?php include("../includes/topo.php") ?>
-    </header>
+        <?php include("../includes/topoAdmin.php") ?>
+</header>
     
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <?php include("../includes/menuAdm.php")?>
@@ -91,7 +91,7 @@
 
             <div class="card container" style="width: 80rem;">
                 <div class="card-body">
-                    <form method="post" class="form-floating" action="tratrarProdutos.php" >
+                    <form method="post" class="form-floating" action="tratarProdutos.php" >
                         <div class="card-img" style="width: 100%;" >
                             <img src="<?=$row['img'];?>"  style="width: 100%; height: 180px;">
                         </div>
@@ -112,8 +112,10 @@
             }
         ?>
 
+        
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 </body>
 </html>

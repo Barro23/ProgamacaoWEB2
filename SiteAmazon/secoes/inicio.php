@@ -73,20 +73,7 @@
                 </div>
             </div>
 
-            <div class="espacoCarddois col card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSysnjt4eTHep8UjMxRrNk0e61JjBQXrpOIqg&usqp=CAU" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Descontos</h5>
-                        <p class="card-text">Até 70% off em Moda</p>
-                        <p class="card-text"><small class="text-body-secondary"><a href="">veja mais sobre essa promoção..</a></small></p>
-                    </div>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
  </div>
@@ -107,13 +94,16 @@
         
 
             <div class="col card" style="width: 25rem; margin-left: 15px;">
-                <div class="card-img" style="width: 100%; height: 350px" >
-                    <img src="<?=$row['img'];?>"  style="width: 100%; height: 100%">
+                <div class="card-img" style="width: 100%; height: 370px;" >
+                    <img src="<?=$row['img'];?>"  style="object-fit: contain; width: 100%; height: 100%">
                 </div>
                 <div class="card-body">
-                    <p class="card-text"><?=$row['descricao'];?></p>
-                    <p class="card-text"><?=$row['valor'];?></p>
-                    <p class="card-text"><?=$row['quantidade'];?></p>
+                    <p class="card-text">Descrição: <?=$row['descricao'];?></p>
+                    <p class="card-text">Preço: <?=$row['valor'];?>,00 R$</p>
+                    <p class="card-text">qtn: <?=$row['quantidade'];?></p>
+                    <form action="">
+                        <input type="submit" class="btn btn-primary" name="vender" value="Comprar">
+                    </form>
                 </div>
             </div>
         

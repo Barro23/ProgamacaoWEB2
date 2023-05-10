@@ -3,19 +3,17 @@
 ?>
 <nav class="colorTopo navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="?secoes=inicio"><img src="img/amazonlogo.png" width="120"></a>
+    <a class="navbar-brand" href="?secoes=inicio"><img src="../img/amazonlogo.png" width="120"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="topoBotoes">
-          <a class="nav-link" href="#">selecione seu end<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-</svg></a>
+          <a class="nav-link" href="#">locate</a>
         </div>
         <div class="topoBotoes">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Filtros
+          dropdown
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -30,16 +28,23 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
+        <div class="topoBotoes btn-group me-2"  >
+            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <?php
+                echo "<center><h7>Bem vindo  ". $_SESSION["usuario"]. "!</h3></center>";
+              ?>
+            </a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link active" href="logout.php">Logout</a></li>
+          </ul>
+        </div>
         <div class="topoBotoes">
-          <a class="nav-link " href="#">
-              Fale Conosco
+          <a class="nav-link" href="#">
+            veja o estoque
           </a>
         </div>
         <div class="topoBotoes">
-          <a class="nav-link" href="adm/telaLoginAdm.php"><img src="img/login.png" width="30">Login</a>
-        </div>
-        <div class="topoBotoes">
-          <a class="nav-link" href="#"><img src="img/carrinho.png" width="30">carrinho</a>
+          <a class="nav-link" href="#"><img src="../img/carrinho.png" width="30">carrinho</a>
         </div>
         
     </div>
