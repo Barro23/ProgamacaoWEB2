@@ -41,9 +41,9 @@
 </center>
 </div>
 
-<div class="espacoCard container-fluid">
+<div class="espacoCardtres container-fluid">
         <div class="personalizarCard row row-cols-1">
-            <div class="espacoCarddois col card mb-3 " style="max-width: 540px;">
+            <div class="espacoCarddois col col-6 card mb-3 " style="max-width: 40%;">
                 <div class="row g-0">
                     <div class="col-md-4">
                     <img src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/87709/a22a899f-17b8-49ab-b621-189d41b25ef9-my-way-giorgio-armani-eau-de-parfum-perfume-feminino-90ml.png" class="img-fluid rounded-start" alt="...">
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="espacoCarddois col card mb-3" style="max-width: 540px;">
+            <div class="espacoCarddois col card mb-3" style="max-width: 40%;">
                 <div class="row g-0">
                     <div class="col-md-4">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOllWAR_Sk96lKtzyr6yzhW9RuGoijqEkhv0sfJfym2KAWmce5damBo8y7e1Ra0Y8YF9w&usqp=CAU" class="img-fluid rounded-start" alt="...">
@@ -72,8 +72,6 @@
                     </div>
                 </div>
             </div>
-
-            
 
         </div>
  </div>

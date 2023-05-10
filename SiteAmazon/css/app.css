@@ -54,7 +54,7 @@ body{
 .personalizarCard{
     position: relative;
     margin-top: -17%;
-    margin-left: 5%;
+    margin-left: 1%;
 
 }
 
@@ -63,6 +63,9 @@ body{
 }
 .espacoCarddois{
     margin-left: 110px;
+}
+.espacoCardtres{
+    margin-left: 0.5%;
 }
 .personalizarlogin{
     margin-left: 45%;
