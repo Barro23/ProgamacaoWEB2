@@ -29,9 +29,13 @@
             $red->trocarUrl(@$_GET['secoes']);
         ?>
     </section>
-    
-    <footer  class="container-fluid py-5 d-lg-block">
+    <br/>
+    <footer  class="colorRodape navbar navbar-expand-lg bg-body-tertiary">
         <?php include("includes/rodape.php")?>
+    </footer>
+
+    <footer  class="colorTopo navbar navbar-expand-lg bg-body-tertiary">
+        <?php include("includes/rodapedois.php")?>
     </footer>
 
     

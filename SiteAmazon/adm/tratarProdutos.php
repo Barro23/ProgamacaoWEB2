@@ -11,7 +11,7 @@
 
         $_SESSION["alerta"] = "<script>alert('Apagado com Sucesso!')</script>";
 
-        header('location: http://localhost/ProgamacaoWeb2-main/SiteAmazon/adm/principal.php');
+        header('location: http://localhost/ProgamacaoWeb2/SiteAmazon/adm/principal.php');
         exit();
 
     }
@@ -28,7 +28,7 @@
         $enviar->insert();
         $_SESSION["alerta"] = "<script>alert('Enviado com Sucesso!')</script>";
 
-        header('location: http://localhost/ProgamacaoWeb2-main/SiteAmazon/adm/principal.php');
+        header('location: http://localhost/ProgamacaoWeb2/SiteAmazon/adm/principal.php');
         exit();
 
     }else if($acao == "Atualizar"){
@@ -43,7 +43,7 @@
 
         $_SESSION["alerta"] = "<script>alert('Atualizado com Sucesso!')</script>";
 
-        header('location: http://localhost/ProgamacaoWeb2-main/SiteAmazon/adm/principal.php');
+        header('location: http://localhost/ProgamacaoWeb2/SiteAmazon/adm/principal.php');
         exit();
 
     }

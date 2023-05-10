@@ -38,7 +38,7 @@
         <br/>
 
         <div class=" container estiloform">
-                <form method="post" class="form-floating" action="canetasAzuis.php" >
+                <form method="post" class="form-floating" action="tratarProdutos.php" >
                     
                     <input type="text" name="descricao" class="form-control" id="floatingInputValue" placeholder="Descrição do Produto" >
                     <label for="floatingInputValue">Descrição do Produto:</label>
@@ -91,7 +91,7 @@
 
             <div class="card container" style="width: 80rem;">
                 <div class="card-body">
-                    <form method="post" class="form-floating" action="canetasAzuis.php" >
+                    <form method="post" class="form-floating" action="tratrarProdutos.php" >
                         <div class="card-img" style="width: 100%;" >
                             <img src="<?=$row['img'];?>"  style="width: 100%; height: 180px;">
                         </div>
@@ -113,9 +113,6 @@
         ?>
 
 
-    <footer  class="container-fluid py-5 d-lg-block">
-        <?php include("../includes/rodape.php")?>
-    </footer>
 
 
 </body>
