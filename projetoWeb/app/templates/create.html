@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<div class=" container estiloform">
+
+    {% if msg %}
+        <div class="alert {{class}}">{{msg}}</div>
+    {% endif %}
+    <form method="post" class="form-floating" action="/store/" >
+       
+    
+        {% csrf_token %}
+
+        <input type="text" name="name" class="form-control" id="name floatingInputValue" placeholder="Cralos" >
+        <label for="floatingInputValue">Nome:</label>
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">user:</label>
+            <input type="text" name="user" class="form-control" id="user formGroupExampleInput2" placeholder="cralos">
+        </div>
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">senha:</label>
+            <input type="password" name="password" class="form-control" id="password formGroupExampleInput2">
+        </div>
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">confirma senha:</label>
+            <input type="password" name="password-conf" class="form-control" id="password-conf formGroupExampleInput2">
+        </div>
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Email:</label>
+            <input type="email" name="email" class="form-control" id="email formGroupExampleInput2" placeholder="Ex.cralos@gmail.com">
+        </div>
+
+        <div class="col-12">
+            <input type="submit" class="btn btn-primary" value="Cadastrar">
+  
+        </div>
+
+    </form>
+</div>
+
+
+{% endblock %}
